@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  line-height: 1;
+  border: none;
+  outline: none;
+  z-index: 182;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+canvas {
+  display: block;
+  background-color: transparent;
+  width: 580px;
+  height: 680px;
+  background-color: black;
+}
+
+.wrapper {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  background-color: purple;
+  width: 1300px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circle.hit {
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.game-infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.game-infos div {
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  width: 20px;
+}
+@keyframes hit {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px #ec0853;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ec0853, 0 0 20px #ec0853;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.body,
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.header div {
+  text-align: center;
+  width: 100px;
+}
+
+.body div {
+  text-align: center;
+  width: 100px;
+}
+
+.score-sheet {
+  width: 300px;
+  background-color: #ec0853;
+}
+
+.life {
+  width: 7px;
+  height: 7px;
+  display: block;
+  margin-bottom: 7px;
+  border-radius: 50%;
+}
+
+#lifeContainer {
+  background-color: #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blue {
+  background-color: #a8073c;
+  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
+}
+.green {
+  background-color: #a8073c;
+  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
+}
+.yellow {
+  background-color: #a8073c;
+  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
+}
+.orange {
+  background-color: #a8073c;
+  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
+}
+.red {
+  background-color: #a8073c;
+  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
+}
+.gray {
+  background-color: rgb(168, 7, 60, 0);
+}

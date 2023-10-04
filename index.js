@@ -14,6 +14,7 @@ let combo = 0;
 let comboArray = [];
 let score = 0;
 let level = 1;
+let indice;
 
 let lives = 30;
 let speed = 6;

@@ -12,8 +12,8 @@
 }
 
 body {
-  background-color: #000000;
   color: #ffffff;
+  background-color: #000000;
 }
 
 canvas {
@@ -21,19 +21,33 @@ canvas {
   background-color: transparent;
   width: 580px;
   height: 680px;
-  background-color: black;
+  background-color: bisque;
+}
+
+.canvas-container {
+  width: 580px;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper {
   display: flex;
   align-items: top;
   justify-content: center;
-  background-color: purple;
+  background-color: aqua;
   width: 1300px;
   padding-top: 80px;
   padding-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+
+.wrapper-wrapper {
+  display: flex;
+  justify-content: left;
 }
 .circle.hit {
   transform-origin: center;
@@ -87,7 +101,8 @@ canvas {
 
 .score-sheet {
   width: 300px;
-  background-color: #ec0854;
+  background-color: #000000;
+  padding-left: 52px;
 }
 
 .life {
@@ -99,11 +114,12 @@ canvas {
 }
 
 #lifeContainer {
-  background-color: #00ffff;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #000000;
 }
 
 .blue {
@@ -128,4 +144,24 @@ canvas {
 }
 .gray {
   background-color: rgb(168, 7, 60, 0);
+}
+
+.key-q {
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.key-s {
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.key-l {
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.key-m {
+  transform-origin: center;
+  animation: hit 0.4s forwards;
 }

@@ -16,6 +16,15 @@ let score = 0;
 let level = 1;
 let isGameStarted = false;
 let indice;
+let closeDiv = document.querySelector(".close");
+let reloadDiv = document.querySelector(".reload");
+let saveDiv = document.querySelector(".save");
+
+console.log(closeDiv);
+
+closeDiv.addEventListener("click", () => {
+  console.log("hey");
+});
 
 let lives = 30;
 let speed = 6;

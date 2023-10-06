@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hit it</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
   </head>
@@ -18,9 +15,16 @@
           <div id="lifeContainer"></div>
         </div>
         <div class="canvas-container">
-          <div class="score-wrapper">
-            <div class="score-wrapper-wrapper">
+          <div class="window-main">
+            <div class="title">hitit.exe</div>
+            <div class="score-wrapper2">
+              Score :
               <div class="score">0</div>
+            </div>
+            <div class="buttons">
+              <div class="save"></div>
+              <div class="reload"></div>
+              <div class="close"></div>
             </div>
           </div>
 
@@ -28,11 +32,14 @@
           <canvas></canvas>
         </div>
         <div class="score-sheet">
-          <h1>Meilleurs scores</h1>
+          <div class="title-score">
+            <span>MeilleursScores.exe</span>
+            <div class="reset"></div>
+          </div>
           <div class="table">
             <div class="header">
-              <div>#</div>
-              <div>Score</div>
+              <div class="diese">#</div>
+              <div class="sctitle">Score</div>
               <div>Combo</div>
             </div>
             <div class="body">

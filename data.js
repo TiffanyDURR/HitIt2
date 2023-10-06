@@ -1,0 +1,58 @@
+export const songs = [
+  {
+    id: 1,
+    songName: "Landmines",
+    artist: "Sum-41",
+    duration: "2:55",
+    link: "songs/1.mp3",
+  },
+  {
+    id: 2,
+    songName: "Teenagers",
+    artist: "My Chemical Romance",
+    duration: "2:41",
+    link: "songs/2.mp3",
+  },
+  {
+    id: 3,
+    songName: "Don't feel like feeling sad today",
+    artist: "Yungblud",
+    duration: "1:56",
+    link: "songs/3.mp3",
+  },
+  {
+    id: 4,
+    songName: "Reviens",
+    artist: "Les 3 Fromages",
+    duration: "2:44",
+    link: "songs/4.mp3",
+  },
+  {
+    id: 1,
+    songName: "Landmines",
+    artist: "Sum-41",
+    duration: "2:55",
+    link: "songs/1.mp3",
+  },
+  {
+    id: 2,
+    songName: "Teenagers",
+    artist: "My Chemical Romance",
+    duration: "2:41",
+    link: "songs/2.mp3",
+  },
+  {
+    id: 3,
+    songName: "Don't feel like feeling sad today",
+    artist: "Yungblud",
+    duration: "1:56",
+    link: "songs/3.mp3",
+  },
+  {
+    id: 4,
+    songName: "Reviens",
+    artist: "Les 3 Fromages",
+    duration: "2:44",
+    link: "songs/4.mp3",
+  },
+];

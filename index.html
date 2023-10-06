@@ -4,16 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hit it</title>
+    <script src="https://kit.fontawesome.com/159d0e16c5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="index.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="wrapper-wrapper">
-        <div class="life-wrapper">
-          Energy
-          <div id="lifeContainer"></div>
+        <div>
+          <div class="life-wrapper">
+            Energy
+            <div id="lifeContainer"></div>
+          </div>
+
+          <div class="lecteur">
+            <div class="header">
+              <div class="temps-ecoule">0:00</div>
+              <div class="equalizer">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+
+              <div class="barre-progression"></div>
+            </div>
+            <div class="boutons">
+              <div class="chanson-precedente"><i class="fas fa-backward"></i></div>
+              <div class="play"><i class="fas fa-play"></i></div>
+              <div class="pause"><i class="fas fa-pause"></i></div>
+              <div class="chanson-suivante"><i class="fas fa-forward"></i></div>
+            </div>
+            <div class="barre-volume">
+              <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider" />
+            </div>
+
+            <div class="liste-des-chansons"></div>
+          </div>
         </div>
+
         <div class="canvas-container">
           <div class="window-main">
             <div class="title">hitit.exe</div>
@@ -66,5 +93,7 @@
 
       <div class="level">1</div>
     </div>
+
+    <script type="module" src="index.js"></script>
   </body>
 </html>

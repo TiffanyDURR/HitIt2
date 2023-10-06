@@ -9,6 +9,7 @@
   border: none;
   outline: none;
   z-index: 182;
+  font-family: "Chewy", cursive;
 }
 
 body {
@@ -18,36 +19,164 @@ body {
 
 canvas {
   display: block;
-  background-color: transparent;
   width: 580px;
   height: 680px;
-  background-color: bisque;
 }
 
 .canvas-container {
-  width: 580px;
-  height: 680px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 49px;
+  background: url(assets/hello.png);
 }
 
 .wrapper {
   display: flex;
   align-items: top;
   justify-content: center;
-  background-color: aqua;
-  width: 1300px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
 
+.back-bottom {
+  height: 165px;
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.score-wrapper {
+  height: 165px;
+  width: 678px;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.score-wrapper-wrapper {
+  text-align: center;
+  width: 200px;
+  border-radius: 24px;
+  padding: 4px;
+  color: #ffffff;
+}
+
+.score-wrapper span {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.score-wrapper div {
+  font-size: 26px;
+  margin-top: 0px;
+}
+
+.backs {
+  height: 165px;
+  background: url(assets/back-bottoms.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.backq {
+  height: 165px;
+  background: url(assets/back-bottomq.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.backl {
+  height: 165px;
+  background: url(assets/back-bottoml.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.backm {
+  height: 165px;
+  background: url(assets/back-bottomm.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.backsf {
+  height: 165px;
+  background: url(assets/back-bottomsf.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.backqf {
+  height: 165px;
+  background: url(assets/back-bottomqf.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.backlf {
+  height: 165px;
+  background: url(assets/back-bottomlf.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+.backmf {
+  height: 165px;
+  background: url(assets/back-bottommf.png);
+  width: 678px;
+  position: absolute;
+  bottom: 20px;
+  transform-origin: center;
+  animation: hit 0.4s forwards;
+}
+
+@keyframes hit {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .wrapper-wrapper {
   display: flex;
-  justify-content: left;
+  background-color: #ecc0ef;
+  padding: 20px;
+  border-radius: 70px;
+  align-items: center;
 }
 .circle.hit {
   transform-origin: center;
@@ -61,11 +190,11 @@ canvas {
   text-align: center;
 }
 
+/*
 .game-infos div {
   margin-left: 40px;
   margin-right: 40px;
   text-align: center;
-  width: 20px;
 }
 @keyframes hit {
   0% {
@@ -81,6 +210,7 @@ canvas {
     opacity: 0;
   }
 }
+*/
 
 .body,
 .header {
@@ -90,60 +220,83 @@ canvas {
 }
 
 .header div {
-  text-align: center;
-  width: 100px;
+  text-align: left;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 68px;
 }
 
 .body div {
-  text-align: center;
-  width: 100px;
+  width: 68px;
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 .score-sheet {
   width: 300px;
-  background-color: #000000;
-  padding-left: 52px;
+  background-color: #f4d9f6;
+  padding: 20px;
+  border-radius: 24px;
+  border: 6px solid #ac6ab0;
+  text-align: center;
+  margin-left: 20px;
+  color: #ac6ab0;
 }
 
 .life {
-  width: 7px;
+  width: 16px;
   height: 7px;
   display: block;
   margin-bottom: 7px;
-  border-radius: 50%;
+  border-radius: 8px;
+  background-color: #ac6ab0;
 }
 
-#lifeContainer {
-  width: 50px;
+.life-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #000000;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ac6ab0;
+}
+
+#lifeContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 0px;
+  background-color: #f4d9f6;
+  padding: 20px;
+  border-radius: 24px;
+  border: 6px solid #ac6ab0;
+}
+
+h1 {
+  color: #ac6ab0;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .blue {
-  background-color: #a8073c;
-  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
 }
 .green {
-  background-color: #a8073c;
-  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
 }
 .yellow {
-  background-color: #a8073c;
-  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
 }
 .orange {
-  background-color: #a8073c;
-  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
 }
 .red {
-  background-color: #a8073c;
-  box-shadow: 0 0 5px #a8073c, 0 0 15px #a8073c, 0 0 15px #a8073c, 0 0 5px #a8073c;
 }
 .gray {
-  background-color: rgb(168, 7, 60, 0);
+  background-color: #cca1cf;
 }
 
 .key-q {

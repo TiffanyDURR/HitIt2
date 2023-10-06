@@ -108,7 +108,7 @@ function letsgogame() {
         ctx.save();
 
         // ctx.drawImage(backgroundImage, hitzone.x, hitzone.y, 110, 110);
-        ctx.fillStyle = "rgba(0, 0, 0, 0)";
+        ctx.fillStyle = "rgba(0, 0, 0, 1)";
         ctx.fillRect(hitzone.x, hitzone.y, 110, 110);
 
         ctx.restore();
@@ -147,7 +147,7 @@ function letsgogame() {
   draw();
 
   let circleBack = new Image();
-  circleBack.src = "assets/halo.png";
+  circleBack.src = "assets/test.jpg";
 
   function animateHit(key) {
     let hitzone = keys[key];
@@ -164,7 +164,7 @@ function letsgogame() {
       ctx.globalAlpha = opacity;
 
       ctx.shadowBlur = progress < 0.5 ? progress * 10 : (1 - progress) * 10;
-      ctx.shadowColor = "#ac6ab0";
+      ctx.shadowColor = "";
 
       ctx.beginPath();
       ctx.arc(0, 0, 25, 0, Math.PI * 2);
@@ -308,7 +308,7 @@ function letsgogame() {
     } else if (score > 75000) {
       speed = 20;
       cadence = 50;
-      level = 8;
+      level = max;
     }
   }
 

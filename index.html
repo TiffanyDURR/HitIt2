@@ -4,14 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hit it</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="wrapper-wrapper">
-        <div id="lifeContainer"></div>
+        <div class="life-wrapper">
+          Energy
+          <div id="lifeContainer"></div>
+        </div>
         <div class="canvas-container">
+          <div class="score-wrapper">
+            <div class="score-wrapper-wrapper">
+              <div class="score">0</div>
+            </div>
+          </div>
+
+          <div class="back-bottom"></div>
           <canvas></canvas>
         </div>
         <div class="score-sheet">
@@ -32,15 +45,12 @@
       </div>
     </div>
     <div class="game-infos">
-      <div>Score</div>
       <div>Statut</div>
       <div>Multiplier</div>
       <div>Combo</div>
       <div>Level</div>
     </div>
     <div class="game-infos">
-      <div class="score">0</div>
-
       <div class="statut">0</div>
 
       <div class="multiplier">0</div>

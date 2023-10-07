@@ -18,19 +18,18 @@ let score = 0;
 let level = 1;
 let isGameStarted = false;
 let indice;
-let closeDiv = document.querySelector(".close");
-let reloadDiv = document.querySelector(".reload");
-let saveDiv = document.querySelector(".save");
+
+const reloadDiv = document.querySelector(".reload");
+const closeDiv = document.querySelector(".close");
+const buttonInfo = document.querySelector(".button-info");
+const winInfosDiv = document.querySelector(".window-infos");
+const winInfosH1 = document.querySelector(".window-infos  h1");
+const winInfosH2 = document.querySelector(".window-infos-container  h2 ");
+const winInfosP = document.querySelector(".window-infos-container  p ");
+
 let nameSongDiv = document.querySelector(".name-song");
 let data = [];
 data = songs;
-console.log(songs);
-
-console.log(closeDiv);
-
-closeDiv.addEventListener("click", () => {
-  console.log("hey");
-});
 
 let lives = 30;
 let speed = 6;
@@ -66,6 +65,14 @@ if (totalHitzoneWidth + totalMarginWidth > totalWidth) {
   };
 }
 
+reloadDiv.addEventListener("click", () => {
+  winInfosDiv.classList.remove("invisible");
+  winInfosDiv.classList.add("visible");
+  winInfosH1.innerHTML = `Recommencer`;
+  winInfosH2.innerHTML = `Recommencer la partie ?`;
+  winInfosP.innerHTML = `Vos scores ne seront pas sauvegardes !   <div onclick="location.reload()" class="grm butt-inf">Rejouer</div>`;
+});
+
 window.addEventListener("keydown", function (event) {
   if (!isGameStarted && event.key === "x") {
     isGameStarted = true;
@@ -73,7 +80,13 @@ window.addEventListener("keydown", function (event) {
     lecture = true;
     playSong(currentSongIndex);
     equalizerDIV.style.display = "flex";
+    winInfosDiv.classList.add("invisible");
+    buttonInfo.classList.add("invisible");
   }
+});
+
+closeDiv.addEventListener("click", () => {
+  winInfosDiv.classList.add("invisible");
 });
 
 function play() {
@@ -110,12 +123,19 @@ function letsgogame() {
         lecture = false;
         audio.play();
         equalizerDIV.style.display = "flex";
+        winInfosDiv.classList.remove("visible");
+        winInfosDiv.classList.add("invisible");
       } else {
         isPaused = true;
         pauseGame();
         lecture = true;
         audio.pause();
         equalizerDIV.style.display = "none";
+        winInfosDiv.classList.remove("invisible");
+        winInfosDiv.classList.add("visible");
+        winInfosH1.innerHTML = `Pause`;
+        winInfosH2.innerHTML = `Jeu en pause`;
+        winInfosP.innerHTML = `<div class="grm butt-inf">Touche <b>p</b> pour reprendre</div>`;
       }
     }
   });
@@ -279,6 +299,12 @@ function letsgogame() {
       updateGame();
       pauseGame();
       console.log("End Game");
+
+      winInfosDiv.classList.remove("invisible");
+      winInfosDiv.classList.add("visible");
+      winInfosH1.innerHTML = `Out of energy`;
+      winInfosH2.innerHTML = `Game over !`;
+      winInfosP.innerHTML = `<div onclick="location.reload()" class="grm butt-inf">Rejouer</div>`;
       lecture = true;
       audio.pause();
       equalizerDIV.style.display = "none";
@@ -391,7 +417,7 @@ function letsgogame() {
 
     scoreDIV.innerHTML = score;
     pointsDIV.innerHTML = points;
-    multiplierDIV.innerHTML = multiplier;
+    multiplierDIV.innerHTML = `x ${multiplier}`;
     comboDIV.innerHTML = combo;
     levelDIV.innerHTML = level;
   }

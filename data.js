@@ -9,13 +9,13 @@ export const songs = [
   {
     id: 2,
     songName: "Teenagers",
-    artist: "My Chemical Romance",
+    artist: "My Chemical  sdsdsds",
     duration: "2:41",
     link: "songs/2.mp3",
   },
   {
     id: 3,
-    songName: "Don't feel like feeling sad today",
+    songName: "Don't feel liqsdqsqsqsqsq sdsdske f",
     artist: "Yungblud",
     duration: "1:56",
     link: "songs/3.mp3",
@@ -37,13 +37,13 @@ export const songs = [
   {
     id: 2,
     songName: "Teenagers",
-    artist: "My Chemical Romance",
+    artist: "My Chemical e",
     duration: "2:41",
     link: "songs/2.mp3",
   },
   {
     id: 3,
-    songName: "Don't feel like feeling sad today",
+    songName: "Don't feel ",
     artist: "Yungblud",
     duration: "1:56",
     link: "songs/3.mp3",

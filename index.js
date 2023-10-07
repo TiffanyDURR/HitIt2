@@ -21,6 +21,10 @@ let indice;
 let closeDiv = document.querySelector(".close");
 let reloadDiv = document.querySelector(".reload");
 let saveDiv = document.querySelector(".save");
+let nameSongDiv = document.querySelector(".name-song");
+let data = [];
+data = songs;
+console.log(songs);
 
 console.log(closeDiv);
 
@@ -443,6 +447,7 @@ window.onload = function () {
 
 let currentSongIndex = 0;
 const audio = new Audio(songs[currentSongIndex].link);
+audio.volume = 0.01;
 
 const playButton = document.querySelector(".play");
 const pauseButton = document.querySelector(".pause");
@@ -499,29 +504,40 @@ let currentSongItem = null;
 function playSong(index) {
   if (currentSongItem) {
     currentSongItem.style.backgroundColor = "";
+    nameSongDiv.innerHTML = `<div class="name-song-inner" data-text="${data[index].artist} - ${data[index].songName}">${data[index].artist} - ${data[index].songName}</div>`;
   }
 
   currentSongIndex = index;
   audio.src = songs[currentSongIndex].link;
+  nameSongDiv.innerHTML = `<div class="name-song-inner" data-text="${data[index].artist} - ${data[index].songName}">${data[index].artist} - ${data[index].songName}</div>`;
 
   audio.oncanplay = function () {
     audio.play();
   };
 
   currentSongItem = songList.children[currentSongIndex];
-  currentSongItem.style.backgroundColor = "blue";
+  currentSongItem.style.backgroundColor = "#ac6ab0";
 }
 
 songs.forEach((song, index) => {
-  const songItem = document.createElement("div");
-  songItem.textContent = `${song.songName} - ${song.artist}`;
+  songList.innerHTML += `
+<div class="song">
+<span>${song.id}. </span>
+<span> ${song.artist} </span>
+<span> - ${song.songName}</span>
+</div>
+`;
+});
 
+let songItems = document.querySelectorAll(".song");
+
+songItems.forEach((songItem, index) => {
   songItem.addEventListener("dblclick", () => {
     playSong(index);
+    nameSongDiv.innerHTML = `<div class="name-song-inner" data-text="${data[index].artist} - ${data[index].songName}">${data[index].artist} - ${data[index].songName}</div>`;
+
     equalizerDIV.style.display = "flex";
   });
-
-  songList.appendChild(songItem);
 });
 
 playButton.addEventListener("click", () => {

@@ -1,0 +1,140 @@
+@font-face { font-family: "pixeboyregular"; src: url("pixeboy-webfont.woff2") format("woff2"),
+url("pixeboy-webfont.woff") format("woff"); font-weight: normal; font-style: normal; } * {
+box-sizing: border-box; padding: 0px; margin: 0px; list-style-type: none; scroll-behavior: smooth;
+text-decoration: none; line-height: 1; border: none; outline: none; z-index: 182; font-family:
+"pixeboyregular"; } body { color: #ffffff; background-color: #ecc0ef; } canvas { display: block;
+width: 580px; height: 680px; } .canvas-container { display: flex; align-items: center;
+justify-content: center; background: url(assets/hello.png); width: 678px; height: 778px;
+margin-left: 20px; margin-right: 20px; background-color: black; } .score-wrapper { height: 165px;
+width: 678px; position: absolute; top: 0px; display: flex; align-items: center; justify-content:
+center; flex-direction: column; }
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hit it</title>
+    <script src="https://kit.fontawesome.com/159d0e16c5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="aside-right">
+        <div class="life">
+          <h1>Energy</h1>
+          <div id="lifeContainer"></div>
+        </div>
+      </div>
+
+      <div class="canvas-container"></div>
+
+      <div class="aside-left"></div>
+    </div>
+
+    <div class="wrapper">
+      <div class="wrapper-wrapper">
+        <div class="aside">
+          <div class="life-wrapper">
+            Energy
+            <div id="lifeContainer"></div>
+          </div>
+
+          <div class="lecteur">
+            <div class="hiccu">
+              <div class="time-zik">
+                <div class="temps-ecoule">0:00</div>
+                <div class="equalizer-wrapper">
+                  <div class="equalizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="name-song"></div>
+
+              <div class="barre-progression"></div>
+            </div>
+            <div class="param-lec">
+              <div class="boutons">
+                <div class="chanson-precedente"><i class="fas fa-backward"></i></div>
+                <div class="play"><i class="fas fa-play"></i></div>
+                <div class="pause"><i class="fas fa-pause"></i></div>
+                <div class="chanson-suivante"><i class="fas fa-forward"></i></div>
+              </div>
+              <div class="barre-volume">
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="0.02"
+                  class="volume-slider"
+                />
+              </div>
+            </div>
+
+            <div class="liste-des-chansons"></div>
+            <a href="#">Ecouter sur spotify</a>
+          </div>
+        </div>
+
+        <div class="canvas-container">
+          <div class="window-main">
+            <div class="title">hitit.exe</div>
+            <div class="score-wrapper">
+              Score :
+              <div class="score">0</div>
+            </div>
+            <div class="buttons">
+              <div class="save"></div>
+              <div class="reload"></div>
+              <div class="close"></div>
+            </div>
+          </div>
+
+          <div class="back-bottom"></div>
+          <canvas></canvas>
+        </div>
+        <div class="score-sheet">
+          <div class="title-score">
+            <span>MeilleursScores.exe</span>
+            <div class="reset"></div>
+          </div>
+          <div class="table">
+            <div class="header">
+              <div class="diese">#</div>
+              <div class="sctitle">Score</div>
+              <div>Combo</div>
+            </div>
+            <div class="body">
+              <div class="score-info"></div>
+              <div class="hit-score"></div>
+              <div class="combo-score"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="game-infos">
+        <div>Statut</div>
+        <div>Multiplier</div>
+        <div>Combo</div>
+        <div>Level</div>
+      </div>
+      <div class="game-infos">
+        <div class="statut">0</div>
+        <div class="multiplier">0</div>
+        <div class="combo">0</div>
+        <div class="level">1</div>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

@@ -9,42 +9,65 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="wrapper-wrapper">
-        <div>
+      <div class="game-container">
+        <div class="aside-right">
           <div class="life-wrapper">
-            Energy
+            <h1>Energy</h1>
             <div id="lifeContainer"></div>
           </div>
 
-          <div class="lecteur">
-            <div class="header">
-              <div class="temps-ecoule">0:00</div>
-              <div class="equalizer">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+          <div class="audio-player">
+            <div class="wrapper-audio">
+              <div class="audio-header">
+                <div class="temps-ecoule">0:00</div>
+                <div class="equalizer-wrapper">
+                  <div class="equalizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
+                </div>
               </div>
-
-              <div class="barre-progression"></div>
-            </div>
-            <div class="boutons">
-              <div class="chanson-precedente"><i class="fas fa-backward"></i></div>
-              <div class="play"><i class="fas fa-play"></i></div>
-              <div class="pause"><i class="fas fa-pause"></i></div>
-              <div class="chanson-suivante"><i class="fas fa-forward"></i></div>
-            </div>
-            <div class="barre-volume">
-              <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider" />
+              <div class="audio-statut">
+                <div class="name-song"></div>
+                <div class="barre-wrapper">
+                  <div class="barre-progression"></div>
+                </div>
+              </div>
             </div>
 
-            <div class="liste-des-chansons"></div>
+            <div class="audio-settings">
+              <div class="audio-buttons">
+                <div class="chanson-precedente"><i class="fas fa-backward"></i></div>
+                <div class="play"><i class="fas fa-play"></i></div>
+                <div class="pause"><i class="fas fa-pause"></i></div>
+                <div class="chanson-suivante"><i class="fas fa-forward"></i></div>
+              </div>
+              <div class="volume">
+                <i class="fas fa-volume-up"></i>
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="0.02"
+                  class="volume-slider"
+                />
+              </div>
+            </div>
+            <div class="playlist">
+              <h2>Playlist</h2>
+              <div class="liste-des-chansons"></div>
+            </div>
           </div>
         </div>
 
         <div class="canvas-container">
-          <div class="window-main">
+          <div class="header-main">
             <div class="title">hitit.exe</div>
-            <div class="score-wrapper2">
+            <div class="score-wrapper">
               Score :
               <div class="score">0</div>
             </div>
@@ -54,22 +77,23 @@
               <div class="close"></div>
             </div>
           </div>
-
           <div class="back-bottom"></div>
           <canvas></canvas>
         </div>
-        <div class="score-sheet">
-          <div class="title-score">
+
+        <div class="aside-left">
+          <div class="score-header">
             <span>MeilleursScores.exe</span>
             <div class="reset"></div>
           </div>
+
           <div class="table">
-            <div class="header">
-              <div class="diese">#</div>
-              <div class="sctitle">Score</div>
-              <div>Combo</div>
+            <div class="table-header">
+              <div id="score-info">#</div>
+              <div id="hit-score">Score</div>
+              <div id="combo-score">Combo</div>
             </div>
-            <div class="body">
+            <div class="score-body">
               <div class="score-info"></div>
               <div class="hit-score"></div>
               <div class="combo-score"></div>
@@ -77,21 +101,20 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="game-infos">
-      <div>Statut</div>
-      <div>Multiplier</div>
-      <div>Combo</div>
-      <div>Level</div>
-    </div>
-    <div class="game-infos">
-      <div class="statut">0</div>
-
-      <div class="multiplier">0</div>
-
-      <div class="combo">0</div>
-
-      <div class="level">1</div>
+      <div>
+        <div class="game-infos">
+          <div>Statut</div>
+          <div>Multiplier</div>
+          <div>Combo</div>
+          <div>Level</div>
+        </div>
+        <div class="game-infos">
+          <div class="statut">0</div>
+          <div class="multiplier">0</div>
+          <div class="combo">0</div>
+          <div class="level">1</div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="index.js"></script>
